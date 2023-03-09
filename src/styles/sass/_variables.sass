@@ -1,0 +1,35 @@
+/**
+  NOTE 1
+  The value of the variable "$transition-duration" must match the value of the variable "transitionDduration" in "src/styles/themes/styled.d.ts".
+
+  NOTE 2
+  The value of the variable "$init-bg-color" must match the value of "initBgColor" in "src/styles/themes/index.ts".
+ */
+
+/** Fonts */
+$font-family: Arial, Helvetica, sans-serif
+$line-height-factor: 1.3
+$letter-spacing: 0.075rem
+$font-size-h1: 4rem
+$font-size-h2: 3rem
+$font-size-h3: 2.5rem
+$font-size-h4: 2rem
+$font-size-h5: 1.95rem
+$font-size-h6: 1.85rem
+$font-size-std: 1.75rem
+
+/** Breakpoints */
+$bkp-sm: 375px
+$bkp-md: 768px
+$bkp-lg: 1200px
+$bkp-desk: 960px
+
+/** Generics */
+$transition-duration: 225ms // Refer to NOTE 1
+$init-bg-color: #222 // Refer to NOTE 2
+$btn-icon-size: 2rem
+$header-height: 6rem
+$footer-min-height: 12rem
+$main-min-height: calc(101vh - $header-height - $footer-min-height)
+$gutter: 2.4rem
+$offset: calc(.5*$gutter)
