@@ -1,11 +1,14 @@
 /**
- * NOTE
+ * NOTE 1
+ * The value in "transitionDuration" should be assigned to the"$transition-duration" variable in "src/styles/sass/_variables.sass".
+ *
+ * NOTE 2
  * The value in "initBgColor" should be assigned to the "$init-bg-color" variable in "src/styles/sass/_variables.sass".
  */
 
 import { DefaultTheme } from "styled-components";
 // My Assets:
-import { StdColorsType } from "./styled";
+import { StdColorsType } from "@/styles/config/styled";
 
 const stdColors: StdColorsType =
   process.env.NEXT_PUBLIC_COLORS_MODE === "app"
@@ -26,11 +29,13 @@ const stdColors: StdColorsType =
         light: "#FFF",
       };
 
-const transitionDuration: DefaultTheme["transitionDuration"] = "225ms";
+const transitionDuration: DefaultTheme["transitionDuration"] =
+  "225ms"; /** Refer to NOTE 1 */
 
 export const darkTheme: DefaultTheme = {
   name: "dark",
-  initBgColor: "#222" /** Refer to NOTE */,
+  transitionDuration,
+  initBgColor: "#222" /** Refer to NOTE 2 */,
   colors: {
     background01: stdColors.dark,
     background02: stdColors.primary,
@@ -39,12 +44,12 @@ export const darkTheme: DefaultTheme = {
     text02: stdColors.dark,
   },
   stdColors,
-  transitionDuration,
 };
 
 export const lightTheme: DefaultTheme = {
   name: "light",
-  initBgColor: "#222" /** Refer to NOTE */,
+  transitionDuration,
+  initBgColor: "#222" /** Refer to NOTE 2 */,
   colors: {
     background01: stdColors.light,
     background02: stdColors.secondary,
@@ -53,5 +58,4 @@ export const lightTheme: DefaultTheme = {
     text02: stdColors.light,
   },
   stdColors,
-  transitionDuration,
 };

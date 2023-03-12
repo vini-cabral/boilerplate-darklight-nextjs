@@ -1,9 +1,3 @@
-/**
- * NOTE
- * The larger value of the "transitionDuration" variable must also be assigned to the "$transition-duration" variable in
- * "src/styles/sass/_variables.sass".
- */
-
 import "styled-components";
 // My Assets:
 import { ScreenModeType } from "@/types";
@@ -24,14 +18,14 @@ export type ColorsType = {
   text02: string;
 };
 
-export type TransitionDurationType = "0s" | "225ms"; /** Refer to NOTE */
+export type TransitionDurationType = "0s" | "225ms";
 
 declare module "styled-components" {
   export interface DefaultTheme {
     name: ScreenModeType;
+    transitionDuration: TransitionDurationType;
     initBgColor: string;
     stdColors: StdColorsType;
     colors: ColorsType;
-    transitionDuration: TransitionDurationType /** Refer to NOTE */;
   }
 }

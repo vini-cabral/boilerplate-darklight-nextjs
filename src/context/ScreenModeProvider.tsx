@@ -10,8 +10,7 @@ import { ThemeProvider } from "styled-components";
 // My Assets:
 import { ScreenModeType } from "@/types";
 import { darkTheme, lightTheme } from "@/styles/themes";
-import PresetStyle from "@/styles/lib/preset";
-import GlobalStyle from "@/styles/globals";
+import PresetStyle from "@/styles/config/preset";
 
 const initState: ScreenModeType = "dark";
 
@@ -75,7 +74,6 @@ export default function ScreenModeProvider({
             : { ...lightTheme, transitionDuration: "0s" }
         }
       >
-        <GlobalStyle />
         <PresetStyle isRead={isReady} hasTransition={hasTransition} />
         {children}
       </ThemeProvider>
