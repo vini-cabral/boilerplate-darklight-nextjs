@@ -18,13 +18,12 @@ export type ColorsType = {
   text02: string;
 };
 
-export type TransitionDurationType = "0s" | "225ms";
+export type TransitionDurationType = "0s" | "300ms";
 
 declare module "styled-components" {
   export interface DefaultTheme {
     name: ScreenModeType;
     transitionDuration: TransitionDurationType;
-    initBgColor: string;
     stdColors: StdColorsType;
     colors: ColorsType;
   }

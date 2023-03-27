@@ -74,7 +74,7 @@ export default function ScreenModeProvider({
             : { ...lightTheme, transitionDuration: "0s" }
         }
       >
-        <PresetStyle isRead={isReady} hasTransition={hasTransition} />
+        <PresetStyle isRead={isReady} />
         {children}
       </ThemeProvider>
     </ScreenModeContext.Provider>
